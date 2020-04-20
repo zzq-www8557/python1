@@ -6,11 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from urllib.parse import quote
 from pyquery import PyQuery as pq
 import time
-# 4-20
-'''
-进入淘宝时是验证界面，需要输入账号密码，然后识别验证码登录或者直接time.sleep一定时间扫码登陆才可以进入到搜索界面。
-思路：输入想要查询的物品，模拟淘宝登录，然后在搜索框中输入物品，点击搜索按钮，在新打开的网页中爬取源代码、解析并保存，保存
-结束后在新打开的源代码中点击下一页按钮然后循环源代码、解析并保存这个一过程。(在这一过程中每点击一次下一页按钮要切换到新出来的选项卡)'''
+
 keyword = 'iPad'
 browser = webdriver.Chrome()
 wait = WebDriverWait(browser, 10)
